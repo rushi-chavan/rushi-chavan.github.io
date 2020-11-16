@@ -31,7 +31,15 @@ body {
       }
     }
   }
-  h1 {
-    color: #121212;
+  section {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      font-size: 5rem;
+    }
   }
 }
