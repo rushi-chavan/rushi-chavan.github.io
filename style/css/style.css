@@ -9,17 +9,23 @@
   --body-background-color: #1a1a1a;
   --body-color: #f5f5f5;
   --nav-background-color: #121212;
-  --nav-a-color: #f0f0f0;
+  --nav-a-color: #dddddd;
   --nav-a-color-hover: #f5f5f5;
+  --name-svg-fill: 245, 245, 245;
+  font-size: 17px;
 }
 
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: var(--body-background-color);
   color: var(--body-color);
+  position: relative;
 }
 
 body nav {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,21 +35,46 @@ body nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 10vh;
   width: 100vw;
   background-color: var(--nav-background-color);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-animation: intro-navbar-fade-in 1s ease-in 4s forwards;
+          animation: intro-navbar-fade-in 1s ease-in 4s forwards;
+  opacity: 0;
 }
 
-body nav a {
+body nav ul {
+  list-style: none;
+}
+
+body nav ul li {
+  display: inline;
+}
+
+body nav ul li a {
+  font-size: 1rem;
+  text-decoration: none;
   color: var(--nav-a-color);
+  padding: 0 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
-body nav a :hover {
+body nav ul li a:hover {
   color: var(--nav-a-color-hover);
 }
 
-body section {
-  height: 90vh;
+body nav ul li a.active {
+  font-size: 1.5rem;
+}
+
+body section.main {
+  height: 100vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,8 +87,193 @@ body section {
           justify-content: center;
 }
 
-body section p {
+body section.main div.about-me {
   text-align: center;
-  font-size: 5rem;
+}
+
+body section.main div.about-me p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  -webkit-animation: intro-details-fade-in 1s ease-out 3s forwards;
+          animation: intro-details-fade-in 1s ease-out 3s forwards;
+  opacity: 0;
+}
+
+body section.main div.about-me div.name svg {
+  height: 4rem;
+  width: auto;
+  margin: 1rem 0 1rem 0;
+  fill: rgba(var(--name-svg-fill), 0);
+  -webkit-animation: intro-name-fade-in 1s ease-in 2s forwards;
+          animation: intro-name-fade-in 1s ease-in 2s forwards;
+}
+
+body section.main div.about-me div.name svg.first-name {
+  margin-right: 1rem;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(1) {
+  stroke-dashoffset: -530;
+  stroke-dasharray: 530;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(2) {
+  stroke-dashoffset: 395;
+  stroke-dasharray: 395;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(3) {
+  stroke-dashoffset: -327;
+  stroke-dasharray: 327;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(4) {
+  stroke-dashoffset: 453;
+  stroke-dasharray: 453;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(5) {
+  stroke-dashoffset: -270;
+  stroke-dasharray: 270;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(6) {
+  stroke-dashoffset: 453;
+  stroke-dasharray: 453;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(7) {
+  stroke-dashoffset: -431;
+  stroke-dasharray: 431;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(8) {
+  stroke-dashoffset: 326;
+  stroke-dasharray: 326;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.first-name :nth-child(9) {
+  stroke-dashoffset: -453;
+  stroke-dasharray: 453;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(1) {
+  stroke-dashoffset: -411;
+  stroke-dasharray: 411;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(2) {
+  stroke-dashoffset: 453;
+  stroke-dasharray: 453;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(3) {
+  stroke-dashoffset: -411;
+  stroke-dasharray: 411;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(4) {
+  stroke-dashoffset: 312;
+  stroke-dasharray: 312;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(5) {
+  stroke-dashoffset: -411;
+  stroke-dasharray: 411;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me div.name svg.last-name :nth-child(6) {
+  stroke-dashoffset: 392;
+  stroke-dasharray: 392;
+  -webkit-animation: intro-name-stroke-anim 2s ease-out forwards;
+          animation: intro-name-stroke-anim 2s ease-out forwards;
+}
+
+body section.main div.about-me h3.description {
+  font-weight: normal;
+  font-size: 2rem;
+  -webkit-animation: intro-details-fade-in 1s ease-out 3s forwards;
+          animation: intro-details-fade-in 1s ease-out 3s forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes intro-name-stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes intro-name-stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes intro-name-fade-in {
+  to {
+    fill: rgba(var(--name-svg-fill), 1);
+  }
+}
+
+@keyframes intro-name-fade-in {
+  to {
+    fill: rgba(var(--name-svg-fill), 1);
+  }
+}
+
+@-webkit-keyframes intro-details-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-details-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes intro-navbar-fade-in {
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes intro-navbar-fade-in {
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
