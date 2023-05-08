@@ -102,7 +102,7 @@ function player() {
     name: pName,
     color: colors[pID],
     position: 0,
-    curr_effect: [],
+    curr_effects: { antidote: 0, stick: 0, double: 0 },
     alive: true,
   };
   return new_player;
@@ -123,10 +123,83 @@ function update_players() {
 
 function check_positions() {
   players = JSON.parse(localStorage.getItem("players"));
+  board_data = {
+    10: 50,
+    15: 68,
+    20: "mb",
+    28: 8,
+    29: "mb",
+    37: 58,
+    65: 97,
+    66: "mb",
+    78: 18,
+    82: "mb",
+    92: 52,
+  };
+  powers = {
+    1: "booster",
+    2: "antidote",
+    3: "double",
+    4: "stick",
+  };
   for (let i = 0; i < parseInt(localStorage.getItem("no-of-players")); i++) {
     if (players[i].position >= 99) {
       alert("player " + players[i].name + " has won the game");
       reset_board();
+    }
+    temp = board_data[players[i].position + 1];
+    if (temp != undefined) {
+      if (String(temp) == "mb") {
+        power = powers[Math.floor(Math.random() * (4 - 1 + 1) + 1)];
+        console.log("power" + power);
+        switch (power) {
+          case "booster":
+            players[i].position =
+              temp + Math.floor(Math.random() * (6 - 3 + 3) + 3) - 1;
+            break;
+          case "antidote":
+            players[i]["curr_effects"].antidote = 3;
+            break;
+          case "double":
+            players[i]["curr_effects"].double = 2;
+            break;
+          case "stick":
+            players[i]["curr_effects"].stick = 2;
+            break;
+        }
+      } else {
+        if (players[i]["curr_effects"].antidote != 0) {
+          if (players[i].position > temp) {
+            alert("antidote is in effect for player " + players[i].name);
+          }
+        } else {
+          if (players[i]["curr_effects"].double != 0) {
+            alert("Doubling the dice number for player " + players[i].name);
+            players[i].position = temp * 2 - 1;
+          } else {
+            if (players[i]["curr_effects"].stick != 0) {
+              alert("Player " + players[i].name + " has 'stick' in effect");
+            } else {
+              players[i].position = temp - 1;
+            }
+          }
+        }
+
+        players[i]["curr_effects"].antidote =
+          players[i]["curr_effects"].antidote > 0
+            ? players[i]["curr_effects"].antidote - 1
+            : 0;
+        players[i]["curr_effects"].double =
+          players[i]["curr_effects"].double > 0
+            ? players[i]["curr_effects"].double - 1
+            : 0;
+        players[i]["curr_effects"].stick =
+          players[i]["curr_effects"].stick > 0
+            ? players[i]["curr_effects"].stick - 1
+            : 0;
+        localStorage.setItem("players", JSON.stringify(players));
+        update_players();
+      }
     }
   }
 }
@@ -166,6 +239,25 @@ function move_player(pID, moves) {
       : parseInt(localStorage.getItem("current-player")) + 1
   );
   update_score_and_turn();
+}
+
+function change_theme(themeName) {
+  switch (themeName) {
+    case "jungle":
+      $("body").css({ background: "#ffffcc" });
+      $("#main").css({
+        background: "url(./theme/jungle.png)",
+        "background-size": "cover",
+      });
+      break;
+    case "ice":
+      $("body").css({ background: "#cceeff" });
+      $("#main").css({
+        background: "url(./theme/snow.gif), url(./theme/snowy-mountains.png)",
+        "background-size": "auto, contain",
+      });
+      break;
+  }
 }
 //#endregion Functionalities
 
@@ -237,7 +329,7 @@ var box = `
 `;
 
 var curr_player = `
-<p class="h3" style="color: myColor">Curent turn: name</p>
+<p class="h3" style="color: myColor; margin: 20px;">Curent turn: name</p>
 `;
 
 var invisible_board = `

@@ -3,6 +3,13 @@
   height: 50px !important;
 }
 
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .dice-container {
   position: absolute;
   top: 0;
@@ -39,4 +46,10 @@
 
 .ladder {
   position: absolute;
+}
+
+#curr-player {
+  background: #e19f65;
+  border-radius: 25px;
+  border: 5px solid #4b1a1a;
 }
