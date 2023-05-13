@@ -10,6 +10,12 @@
   flex-direction: column;
 }
 
+.p-card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .dice-container {
   position: absolute;
   top: 0;

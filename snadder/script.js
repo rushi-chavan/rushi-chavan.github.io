@@ -1,7 +1,19 @@
 //#region All Event listeners
 $(document).on("click", "#play-btn", function () {
   $("#main div:first-child").remove();
-  console.log("select type");
+  $("#main").prepend(choose_theme);
+});
+
+$(document).on("click", "#theme-btn", function () {
+  $("#choose-theme").remove();
+  switch (String($(this).html()).trim().toLowerCase()) {
+    case "jungle (current)":
+      change_theme("jungle");
+      break;
+    case "ice theme":
+      change_theme("ice");
+      break;
+  }
   $("#main").prepend(play_type);
 });
 
@@ -42,7 +54,6 @@ $(document).on("click", "#dice", function () {
 
 //#region Functionalities
 function prepare_board(no_of_players) {
-  console.log("adding board");
   $("#main").prepend(board);
   for (var i = 0, l = 10; i < l; i++) {
     rowNum = "row-" + String(i);
@@ -75,6 +86,7 @@ function prepare_board(no_of_players) {
   $("#main").prepend(ladders_board);
   $("#ladders-board").prepend(ladder);
   update_score_and_turn();
+  $("#main").append(player_cards);
 }
 
 function ready_players(no_of_players) {
@@ -119,6 +131,21 @@ function update_players() {
     );
   }
   check_positions();
+  update_cards();
+}
+
+function update_cards() {
+  $("#p-cards").empty();
+  players = JSON.parse(localStorage.getItem("players"));
+  for (let i = 0; i < parseInt(localStorage.getItem("no-of-players")); i++) {
+    $("#p-cards").append(
+      player_details
+        .replace("pname", players[i]["name"])
+        .replace("anum", players[i]["curr_effects"]["antidote"])
+        .replace("dnum", players[i]["curr_effects"]["double"])
+        .replace("snum", players[i]["curr_effects"]["stick"])
+    );
+  }
 }
 
 function check_positions() {
@@ -262,14 +289,20 @@ function change_theme(themeName) {
 //#endregion Functionalities
 
 //#region HTML code snippets
+var choose_theme = `
+<div id="choose-theme" class="d-flex flex-column">
+  <button type="button" id="theme-btn" class="btn btn-success" style="margin-bottom: 20px">
+    Jungle (current)
+  </button>
+  <button type="button" id="theme-btn" class="btn btn-success">
+    Ice Theme
+  </button>
+</div>
+`;
+
 var play_type = `
 <div id="play-type" class="d-flex flex-column">
-  <button
-    type="button"
-    id="sngl-plyr-btn"
-    class="btn btn-success"
-    style="margin-bottom: 20px"
-  >
+  <button type="button" id="sngl-plyr-btn" class="btn btn-success" style="margin-bottom: 20px">
     Single Player
   </button>
   <button type="button" id="multi-plyr-btn" class="btn btn-success">
@@ -312,6 +345,23 @@ var board = `
 <div class="dice-container d-flex flex-column w-25 vh-100 justify-content-center align-items-center">
   <div id="curr-player"></div>
   <img class="dice" id="dice" src="./dice-images/1.png" />
+</div>
+`;
+
+var player_cards = `
+<div class="p-card-container d-flex flex-column w-25 vh-100 justify-content-center align-items-center">
+  <div id="p-cards"></div>
+</div>
+`;
+
+var player_details = `
+<div class="card">
+  <h5 class="card-header">pname</h5>
+  <div class="card-body">
+    <h5 class="card-title">Antidote: anum</h5>
+    <h5 class="card-title">Double: dnum</h5>
+    <h5 class="card-title">Sticky Floor: snum</h5>
+  </div>
 </div>
 `;
 
