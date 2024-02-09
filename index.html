@@ -1,124 +1,1095 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="/style/css/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Basic Page Needs
+    ================================================== -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta
+      name="keyword"
+      content="resume, cv, portfolio, vcard, responsive, retina, jquery, css3, tailwindcss, material CV, creative, designer, developer, online cv, online resume, powerful portfolio, professional, landing page"
+    />
+    <meta name="description" content="Rushikesh Chavan - Portfolio" />
+    <meta name="author" content="Rushikesh Chavan" />
+
+    <!-- Site Title
+    ================================================== -->
+    <title>Rushikesh Chavan - Portfolio</title>
+
+    <!-- Site Favicon
+    ================================================== -->
+    <!-- <link rel="shortcut icon" href="./user-sidebar-thumb." sizes="any" /> -->
+
+    <!-- Google Fonts
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+
+    <!-- All CSS Here
+    ================================================== -->
+    <link rel="stylesheet" href="./styles/fontAwesome5Pro.css" />
+    <link rel="stylesheet" href="./styles/cdheadline.css" />
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/style.min.css" />
+
+    <style>
+      INPUT:-webkit-autofill,
+      SELECT:-webkit-autofill,
+      TEXTAREA:-webkit-autofill {
+        animation-name: onautofillstart;
+      }
+      INPUT:not(:-webkit-autofill),
+      SELECT:not(:-webkit-autofill),
+      TEXTAREA:not(:-webkit-autofill) {
+        animation-name: onautofillcancel;
+      }
+      @keyframes onautofillstart {
+      }
+      @keyframes onautofillcancel {
+      }
+    </style>
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="">Dummy</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a class="active" href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-    <section class="main">
-      <div class="about-me">
-        <!-- <p>I am</p> -->
-        <div class="name">
-          <svg
-            class="first-name"
-            width="658"
-            height="115"
-            viewBox="0 0 658 115"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M60.625 111L33.1328 68.4609C30.3672 68.4141 26.5 68.25 21.5312 67.9688V111H2.54688V7.99219C3.57812 7.99219 7.53906 7.82812 14.4297 7.5C21.3203 7.125 26.875 6.9375 31.0938 6.9375C57.25 6.9375 70.3281 17.0625 70.3281 37.3125C70.3281 43.4062 68.5234 48.9609 64.9141 53.9766C61.3047 58.9922 56.7578 62.5312 51.2734 64.5938L81.7188 111H60.625ZM21.5312 23.8828V52.5C24.9062 52.7812 27.4844 52.9219 29.2656 52.9219C36.9062 52.9219 42.4844 51.8438 46 49.6875C49.5625 47.5312 51.3438 43.3359 51.3438 37.1016C51.3438 32.0391 49.4453 28.5 45.6484 26.4844C41.8516 24.4688 35.875 23.4609 27.7188 23.4609C25.75 23.4609 23.6875 23.6016 21.5312 23.8828Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M138.039 111.07V104.742C135.555 106.852 132.133 108.656 127.773 110.156C123.414 111.656 119.406 112.406 115.75 112.406C98.2656 112.406 89.5234 103.125 89.5234 84.5625V35.6953H107.102V83.2266C107.102 92.8828 111.438 97.7109 120.109 97.7109C124.094 97.7109 127.797 96.6797 131.219 94.6172C134.641 92.5547 136.914 90.1641 138.039 87.4453V35.6953H155.617V111.07H138.039Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M169.961 106.148L176.219 92.1562C181.469 96.3281 187.398 98.4141 194.008 98.4141C200.852 98.4141 204.273 95.9766 204.273 91.1016C204.273 88.2422 203.242 85.8984 201.18 84.0703C199.117 82.2422 195.109 80.0859 189.156 77.6016C176.172 72.2109 169.68 64.6641 169.68 54.9609C169.68 48.4453 172.164 43.3828 177.133 39.7734C182.102 36.1172 188.453 34.2891 196.188 34.2891C204.016 34.2891 211.375 36.0469 218.266 39.5625L213.203 53.2031C209.359 49.9219 204.016 48.2812 197.172 48.2812C191.031 48.2812 187.961 50.7188 187.961 55.5938C187.961 57.5156 188.969 59.25 190.984 60.7969C193 62.3438 197.312 64.4297 203.922 67.0547C210.531 69.6328 215.289 72.7734 218.195 76.4766C221.102 80.1797 222.555 84.6562 222.555 89.9062C222.555 96.8906 219.953 102.398 214.75 106.43C209.594 110.414 202.562 112.406 193.656 112.406C188.641 112.406 184.609 111.984 181.562 111.141C178.562 110.344 174.695 108.68 169.961 106.148Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M285.344 111V64.5938C285.344 59.9531 283.891 56.2266 280.984 53.4141C278.078 50.6016 274.281 49.1953 269.594 49.1953C266.688 49.1953 263.758 49.9922 260.805 51.5859C257.852 53.1328 255.742 54.9141 254.477 56.9297V111H236.617V7.64062L254.477 3.42188V40.4766C259.023 36.3516 265.281 34.2891 273.25 34.2891C282.672 34.2891 289.984 36.9141 295.188 42.1641C300.391 47.3672 302.992 54.8438 302.992 64.5938V111H285.344Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M335.758 6.51562C338.57 6.51562 340.961 7.52344 342.93 9.53906C344.945 11.5078 345.953 13.8984 345.953 16.7109C345.953 19.5234 344.945 21.9375 342.93 23.9531C340.961 25.9219 338.57 26.9062 335.758 26.9062C332.945 26.9062 330.531 25.9219 328.516 23.9531C326.547 21.9375 325.562 19.5234 325.562 16.7109C325.562 13.8984 326.547 11.5078 328.516 9.53906C330.531 7.52344 332.945 6.51562 335.758 6.51562ZM326.688 111V50.1094H317.055V35.6953H344.477V111H326.688Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M413.172 111L391.023 76.8984L382.586 85.8281V111H365.008V7.64062L382.586 3.42188V64.5938L407.688 35.6953H428.852L403.398 64.2422L434.055 111H413.172Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M511.117 78.7266H457.328C457.656 84.7266 459.719 89.3906 463.516 92.7188C467.312 96.0469 472.422 97.7109 478.844 97.7109C486.859 97.7109 492.953 95.625 497.125 91.4531L503.945 104.883C497.758 109.898 488.523 112.406 476.242 112.406C464.758 112.406 455.664 109.055 448.961 102.352C442.305 95.6016 438.977 86.2031 438.977 74.1562C438.977 62.2969 442.633 52.6875 449.945 45.3281C457.305 37.9688 466.117 34.2891 476.383 34.2891C487.305 34.2891 496.07 37.5469 502.68 44.0625C509.289 50.5781 512.594 58.875 512.594 68.9531C512.594 71.1094 512.102 74.3672 511.117 78.7266ZM457.961 65.5078H494.945C493.727 54.4922 487.633 48.9844 476.664 48.9844C466.633 48.9844 460.398 54.4922 457.961 65.5078Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M522.086 106.148L528.344 92.1562C533.594 96.3281 539.523 98.4141 546.133 98.4141C552.977 98.4141 556.398 95.9766 556.398 91.1016C556.398 88.2422 555.367 85.8984 553.305 84.0703C551.242 82.2422 547.234 80.0859 541.281 77.6016C528.297 72.2109 521.805 64.6641 521.805 54.9609C521.805 48.4453 524.289 43.3828 529.258 39.7734C534.227 36.1172 540.578 34.2891 548.312 34.2891C556.141 34.2891 563.5 36.0469 570.391 39.5625L565.328 53.2031C561.484 49.9219 556.141 48.2812 549.297 48.2812C543.156 48.2812 540.086 50.7188 540.086 55.5938C540.086 57.5156 541.094 59.25 543.109 60.7969C545.125 62.3438 549.438 64.4297 556.047 67.0547C562.656 69.6328 567.414 72.7734 570.32 76.4766C573.227 80.1797 574.68 84.6562 574.68 89.9062C574.68 96.8906 572.078 102.398 566.875 106.43C561.719 110.414 554.688 112.406 545.781 112.406C540.766 112.406 536.734 111.984 533.688 111.141C530.688 110.344 526.82 108.68 522.086 106.148Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M637.469 111V64.5938C637.469 59.9531 636.016 56.2266 633.109 53.4141C630.203 50.6016 626.406 49.1953 621.719 49.1953C618.812 49.1953 615.883 49.9922 612.93 51.5859C609.977 53.1328 607.867 54.9141 606.602 56.9297V111H588.742V7.64062L606.602 3.42188V40.4766C611.148 36.3516 617.406 34.2891 625.375 34.2891C634.797 34.2891 642.109 36.9141 647.312 42.1641C652.516 47.3672 655.117 54.8438 655.117 64.5938V111H637.469Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-          </svg>
 
-          <svg
-            class="last-name"
-            width="478"
-            height="115"
-            viewBox="0 0 478 115"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M78.1406 13.4766L70.6172 28.5938C66.5391 24.5156 59.9766 22.4766 50.9297 22.4766C42.3516 22.4766 35.3203 26.0859 29.8359 33.3047C24.3516 40.4766 21.6094 49.5703 21.6094 60.5859C21.6094 71.6016 24.1406 80.3438 29.2031 86.8125C34.3125 93.2812 41.1094 96.5156 49.5938 96.5156C59.2969 96.5156 66.8906 93.0469 72.375 86.1094L80.8828 100.875C73.4297 108.797 62.5078 112.758 48.1172 112.758C33.7266 112.758 22.5469 108.023 14.5781 98.5547C6.60938 89.0859 2.625 76.1719 2.625 59.8125C2.625 44.5781 7.03125 31.8516 15.8438 21.6328C24.7031 11.3672 36.0234 6.23438 49.8047 6.23438C61.6172 6.23438 71.0625 8.64844 78.1406 13.4766Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M143.391 111V64.5938C143.391 59.9531 141.938 56.2266 139.031 53.4141C136.125 50.6016 132.328 49.1953 127.641 49.1953C124.734 49.1953 121.805 49.9922 118.852 51.5859C115.898 53.1328 113.789 54.9141 112.523 56.9297V111H94.6641V7.64062L112.523 3.42188V40.4766C117.07 36.3516 123.328 34.2891 131.297 34.2891C140.719 34.2891 148.031 36.9141 153.234 42.1641C158.438 47.3672 161.039 54.8438 161.039 64.5938V111H143.391Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M221.93 103.477C220.336 106.102 217.547 108.258 213.562 109.945C209.625 111.586 205.5 112.406 201.188 112.406C193.078 112.406 186.703 110.391 182.062 106.359C177.422 102.281 175.102 96.5156 175.102 89.0625C175.102 80.3438 178.359 73.5234 184.875 68.6016C191.438 63.6797 200.742 61.2188 212.789 61.2188C214.852 61.2188 217.289 61.5703 220.102 62.2734C220.102 53.4141 214.5 48.9844 203.297 48.9844C196.688 48.9844 191.156 50.0859 186.703 52.2891L182.906 38.6484C188.953 35.7422 196.148 34.2891 204.492 34.2891C215.977 34.2891 224.391 36.9141 229.734 42.1641C235.078 47.3672 237.75 57.2578 237.75 71.8359V87.9375C237.75 97.9688 239.766 104.273 243.797 106.852C242.344 109.383 240.727 110.93 238.945 111.492C237.164 112.102 235.125 112.406 232.828 112.406C230.297 112.406 228.023 111.469 226.008 109.594C223.992 107.719 222.633 105.68 221.93 103.477ZM220.242 75.5625C217.242 74.9531 214.992 74.6484 213.492 74.6484C199.617 74.6484 192.68 79.1953 192.68 88.2891C192.68 95.0391 196.594 98.4141 204.422 98.4141C214.969 98.4141 220.242 93.1406 220.242 82.5938V75.5625Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M288.023 112.406H281.695L247.664 35.6953H266.93L284.93 81.6797L304.266 35.6953H322.898L288.023 112.406Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M374.648 103.477C373.055 106.102 370.266 108.258 366.281 109.945C362.344 111.586 358.219 112.406 353.906 112.406C345.797 112.406 339.422 110.391 334.781 106.359C330.141 102.281 327.82 96.5156 327.82 89.0625C327.82 80.3438 331.078 73.5234 337.594 68.6016C344.156 63.6797 353.461 61.2188 365.508 61.2188C367.57 61.2188 370.008 61.5703 372.82 62.2734C372.82 53.4141 367.219 48.9844 356.016 48.9844C349.406 48.9844 343.875 50.0859 339.422 52.2891L335.625 38.6484C341.672 35.7422 348.867 34.2891 357.211 34.2891C368.695 34.2891 377.109 36.9141 382.453 42.1641C387.797 47.3672 390.469 57.2578 390.469 71.8359V87.9375C390.469 97.9688 392.484 104.273 396.516 106.852C395.062 109.383 393.445 110.93 391.664 111.492C389.883 112.102 387.844 112.406 385.547 112.406C383.016 112.406 380.742 111.469 378.727 109.594C376.711 107.719 375.352 105.68 374.648 103.477ZM372.961 75.5625C369.961 74.9531 367.711 74.6484 366.211 74.6484C352.336 74.6484 345.398 79.1953 345.398 88.2891C345.398 95.0391 349.312 98.4141 357.141 98.4141C367.688 98.4141 372.961 93.1406 372.961 82.5938V75.5625Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-            <path
-              d="M457.969 111V67.4766C457.969 61.0547 456.727 56.3672 454.242 53.4141C451.805 50.4609 447.797 48.9844 442.219 48.9844C439.641 48.9844 436.875 49.7109 433.922 51.1641C431.016 52.6172 428.742 54.4219 427.102 56.5781V111H409.523V35.6953H422.18L425.414 42.7266C430.195 37.1016 437.25 34.2891 446.578 34.2891C455.531 34.2891 462.586 36.9844 467.742 42.375C472.945 47.7188 475.547 55.1953 475.547 64.8047V111H457.969Z"
-              stroke="#F5F5F5"
-              stroke-width="2"
-            />
-          </svg>
+  <body class="relative custom_cursor">
+    <!-- Custom Cursor Start -->
+    <div class="custom_cursor_one fixed top-0 left-0 w-8 h-8 border border-gray-400 rounded-full pointer-events-none" style="transform: translate3d(calc(949px - 50%), calc(693px - 50%), 0px)"></div>
+    <div
+      class="custom_cursor_two w-1 h-1 rounded-full border border-gray-400 bg-metborder-gray-400 fixed pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      style="left: 949px; top: 693px"
+    ></div>
+    <!-- Custom Cursor End -->
+
+    <!-- App Preloader Start -->
+
+    <!-- App Preloader End -->
+
+    <!-- App Start -->
+    <div class="relative pt-10 minfo__app max-xl:pt-20">
+      <div class="menu-overlay fixed top-0 left-0 w-full h-full bg-black/60 transition-all duration-200 z-999 opacity-0 invisible [&amp;.is-menu-open]:visible [&amp;.is-menu-open]:opacity-100"></div>
+      <div class="max-lg:px-4">
+        <!-- Mobile Menu Bar Start -->
+        <div class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-2 px-3 bg-white/10 mobile-menu-bar sm:px-6 backdrop-blur-md xl:hidden">
+          <div class="text-lg font-medium name">
+            <a class="flex items-center gap-2 text-black dark:text-white" href="/">
+              <img src="./images/site-logo.svg" alt="Logo" />
+              <span>Portfolio</span>
+            </a>
+          </div>
+          <!-- Mobile Hamburger Menu Start -->
+          <button class="w-12 h-12 border rounded-full hamburger menu_toggle bg-white dark:bg-nightBlack border-platinum dark:border-greyBlack flex-center" type="button" aria-label="Open Mobile Menu">
+            <svg viewBox="0 0 20 12" class="w-6" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.33333 11.3333C5.33333 11.1565 5.40357 10.987 5.5286 10.8619C5.65362 10.7369 5.82319 10.6667 6 10.6667H19.3333C19.5101 10.6667 19.6797 10.7369 19.8047 10.8619C19.9298 10.987 20 11.1565 20 11.3333C20 11.5101 19.9298 11.6797 19.8047 11.8047C19.6797 11.9298 19.5101 12 19.3333 12H6C5.82319 12 5.65362 11.9298 5.5286 11.8047C5.40357 11.6797 5.33333 11.5101 5.33333 11.3333ZM2.66667 6C2.66667 5.82319 2.7369 5.65362 2.86193 5.5286C2.98695 5.40357 3.15652 5.33333 3.33333 5.33333H16.6667C16.8435 5.33333 17.013 5.40357 17.1381 5.5286C17.2631 5.65362 17.3333 5.82319 17.3333 6C17.3333 6.17681 17.2631 6.34638 17.1381 6.4714C17.013 6.59643 16.8435 6.66667 16.6667 6.66667H3.33333C3.15652 6.66667 2.98695 6.59643 2.86193 6.4714C2.7369 6.34638 2.66667 6.17681 2.66667 6ZM0 0.666667C0 0.489856 0.0702379 0.320287 0.195262 0.195262C0.320286 0.070238 0.489856 0 0.666667 0H14C14.1768 0 14.3464 0.070238 14.4714 0.195262C14.5964 0.320287 14.6667 0.489856 14.6667 0.666667C14.6667 0.843478 14.5964 1.01305 14.4714 1.13807C14.3464 1.2631 14.1768 1.33333 14 1.33333H0.666667C0.489856 1.33333 0.320286 1.2631 0.195262 1.13807C0.0702379 1.01305 0 0.843478 0 0.666667Z"
+                class="fill-theme dark:fill-white"
+              ></path>
+            </svg>
+          </button>
+          <!-- Mobile Hamburger Menu End -->
         </div>
+        <!-- Mobile Menu Bar End -->
 
-        <!-- <h3 class="description">A Web Developer</h3> -->
+        <!-- Mobile Menu Sidebar Start -->
+        <div
+          class="mobile-menu fixed top-0 -right-full w-full max-w-mobilemenu bg-flashWhite dark:bg-nightBlack z-999 h-full xl:hidden transition-all duration-300 [&amp;.is-menu-open]:right-0 py-12 px-8 overflow-y-scroll"
+        >
+          <button class="absolute flex items-center justify-center w-9 h-9 text-sm text-white rounded-full close-menu top-4 right-4 bg-greyBlack" aria-label="Close Menu">
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="mb-6 text-lg font-medium text-black dark:text-white menu-title">Menu</div>
+          <ul class="space-y-5 font-normal main-menu">
+            <li data-scroll-nav="0" class="relative group">
+              <a href="/#home" class="flex items-center space-x-2 group">
+                <span class="w-5 text-black dark:text-white group-[&amp;.active]:text-theme">
+                  <i class="fal fa-home"></i>
+                </span>
+                <span class="group-[&amp;.active]:text-theme dark:group-[&amp;.active]:text-white group-hover:text-theme transition-colors"> Home </span>
+              </a>
+            </li>
+            <li data-scroll-nav="1" class="relative group">
+              <a href="/#about" class="flex items-center space-x-2 group">
+                <span class="w-5 text-black dark:text-white group-[&amp;.active]:text-theme">
+                  <i class="fal fa-user"></i>
+                </span>
+                <span class="group-[&amp;.active]:text-theme dark:group-[&amp;.active]:text-white group-hover:text-theme transition-colors"> About </span>
+              </a>
+            </li>
+            <li data-scroll-nav="2" class="relative group">
+              <a href="/#resume" class="flex items-center space-x-2 group">
+                <span class="w-5 text-black dark:text-white group-[&amp;.active]:text-theme">
+                  <i class="fal fa-file-alt"></i>
+                </span>
+                <span class="group-[&amp;.active]:text-theme dark:group-[&amp;.active]:text-white group-hover:text-theme transition-colors"> Resume </span>
+              </a>
+            </li>
+            <li data-scroll-nav="3" class="relative group">
+              <a href="/#skill" class="flex items-center space-x-2 group">
+                <span class="w-5 text-black dark:text-white group-[&amp;.active]:text-theme">
+                  <i class="fal fa-graduation-cap"></i>
+                </span>
+                <span class="group-[&amp;.active]:text-theme dark:group-[&amp;.active]:text-white group-hover:text-theme transition-colors"> Skills </span>
+              </a>
+            </li>
+            <li data-scroll-nav="4" class="relative group">
+              <a href="/#contact" class="flex items-center space-x-2 group">
+                <span class="w-5 text-black dark:text-white group-[&amp;.active]:text-theme">
+                  <i class="fal fa-envelope"></i>
+                </span>
+                <span class="group-[&amp;.active]:text-theme dark:group-[&amp;.active]:text-white group-hover:text-theme transition-colors"> Contact </span>
+              </a>
+            </li>
+          </ul>
+          <br /><br />
+          <div class="mb-4 font-medium text-black dark:text-white menu-title text-md">Get in Touch</div>
+          <!-- Social Share Icon Start  -->
+          <div class="flex items-center space-x-4 social-icons">
+            <a
+              href="https://api.whatsapp.com/send?text=Check%20this%20portfolio%20of%20Rushikesh%20Chavan%0Ahttps%3A%2F%2Frushi.ch"
+              target="_blank"
+              class="flex transition duration-200 hover:text-white"
+              title="Share with WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rushi.ch" class="flex transition duration-200 hover:text-white" title="Share with Linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?text=Check%20this%20portfolio%20of%20Rushikesh%20Chavan&url=https%3A%2F%2Frushi.ch"
+              target="_blank"
+              class="flex transition duration-200 hover:text-white"
+              title="Share with X"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="sms:?body=Check this portfolio of Rushikesh Chavan https://rushi.ch" class="flex transition duration-200 hover:text-white" title="Share with SMS">
+              <i class="fab fa-comment"></i>
+            </a>
+          </div>
+          <!-- Social Share Icon End  -->
+        </div>
+        <!-- Mobile Menu Sidebar End -->
+
+        <!-- Sidebar Profile Start -->
+        <div class="w-full mx-auto minfo__sidebar__wrapper xl:fixed xl:top-1/2 xl:left-4 2xl:left-14 xl:-translate-y-1/2 md:max-w-sidebar xl:max-2xl:max-w-xs z-999">
+          <div class="p-3 mb-3 overflow-hidden minfo__sidebar bg-white dark:bg-nightBlack rounded-2xl">
+            <div class="mx-4 mt-12 text-center user-info lg:mx-6">
+              <a class="w-36 h-36 mb-2.5 block mx-auto border-6 border-platinum dark:border-[#2f2f2f] overflow-hidden rounded-full" href="/">
+                <img src="./images/user-sidebar-thumb.png" class="hidden dark:block w-full h-full rounded-full" alt="Rushikesh Chavan" />
+                <!--Image for Dark Version -->
+                <img src="./images/user-sidebar-thumb-light.png" class="dark:hidden w-full h-full rounded-full" alt="Rushikesh Chavan" />
+                <!--Image for Light Version -->
+              </a>
+              <h6 class="mb-1 text-lg font-semibold text-black dark:text-white name">Rushikesh Chavan</h6>
+              <div class="leading-none cd-headline clip is-full-width">
+                <h6 class="text-sm cd-words-wrapper designation text-theme after:!bg-theme" style="width: 104.202px; overflow: hidden">
+                  <b class="font-normal is-hidden">Software Engineer</b>
+                  <b class="font-normal is-visible">Photographers</b>
+                  <b class="font-normal is-hidden">Web Developer</b>
+                </h6>
+              </div>
+            </div>
+            <div class="pt-6 mx-4 border-t lg:mx-6 user-meta-info md:mx-7 my-7 border-platinum dark:border-metalBlack">
+              <ul class="space-y-3">
+                <li class="flex text-sm">
+                  <span class="flex-1 font-medium text-black dark:text-white">Residence:</span>
+                  <span>California - USA</span>
+                </li>
+                <li class="flex text-sm">
+                  <span class="flex-1 font-medium text-black dark:text-white">City:</span>
+                  <span>Los Angeles</span>
+                </li>
+                <li class="flex text-sm">
+                  <span class="flex-1 font-medium text-black dark:text-white">Age:</span>
+                  <span>25</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="px-4 py-5 lg:py-6 lg:px-6 rounded-2xl md:px-8 bg-flashWhite dark:bg-metalBlack">
+              <div class="text-sm font-medium text-black dark:text-white">Skills</div>
+              <div class="flex items-center justify-between my-4 space-x-4 skills_circle">
+                <div class="space-y-2 text-center progressCircle">
+                  <div class="relative w-12 h-12 circle" data-percent="85">
+                    <canvas width="60" height="60" style="height: 48px; width: 48px"></canvas>
+                    <div class="absolute inset-0 text-[13px] font-medium label flex-center">85%</div>
+                  </div>
+                  <p class="text-[13px] font-normal dark:font-light text-black dark:text-white/85">Java</p>
+                </div>
+                <div class="space-y-2 text-center progressCircle">
+                  <div class="relative w-12 h-12 circle" data-percent="80">
+                    <canvas width="60" height="60" style="height: 48px; width: 48px"></canvas>
+                    <div class="absolute inset-0 text-[13px] font-medium label flex-center">80%</div>
+                  </div>
+                  <p class="text-[13px] font-normal dark:font-light text-black dark:text-white/90">Java</p>
+                </div>
+                <div class="space-y-2 text-center progressCircle">
+                  <div class="relative w-12 h-12 circle" data-percent="90">
+                    <canvas width="60" height="60" style="height: 48px; width: 48px"></canvas>
+                    <div class="absolute inset-0 text-[13px] font-medium label flex-center">90%</div>
+                  </div>
+                  <p class="text-[13px] font-normal dark:font-light text-black dark:text-white/90">SQL</p>
+                </div>
+                <div class="space-y-2 text-center progressCircle">
+                  <div class="relative w-12 h-12 circle" data-percent="80">
+                    <canvas width="60" height="60" style="height: 48px; width: 48px"></canvas>
+                    <div class="absolute inset-0 text-[13px] font-medium label flex-center">80%</div>
+                  </div>
+                  <p class="text-[13px] font-normal dark:font-light text-black dark:text-white/80">HTML</p>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="/mycv.pdf"
+                  download=""
+                  target="_blank"
+                  class="text-center text-sm border border-theme bg-theme flex items-center justify-center gap-2 text-white rounded-4xl py-3.5 transition duration-300 text-[15px] font-semibold hover:bg-themeHover hover:border-themeHover"
+                >
+                  DOWNLOAD CV
+                  <span class="animate-bounce">
+                    <svg width="18" height="18" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.0724 4.92378C12.0726 4.91034 12.0726 4.89691 12.0726 4.88368C12.0726 2.53968 10.1657 0.632812 7.82171 0.632812C5.47771 0.632812 3.57084 2.53968 3.57084 4.88368C3.57084 4.89691 3.57084 4.91055 3.57104 4.92378C1.95417 5.0992 0.691406 6.47267 0.691406 8.13554C0.691406 9.91704 2.14059 11.3662 3.92209 11.3662H4.33138C4.55606 11.3662 4.7384 11.1839 4.7384 10.9592C4.7384 10.7345 4.55606 10.5522 4.33138 10.5522H3.92209C2.58952 10.5522 1.50544 9.46811 1.50544 8.13554C1.50544 6.80297 2.58952 5.71888 3.92209 5.71888H4.00309C4.11868 5.71888 4.22898 5.66963 4.30611 5.58355C4.38345 5.49726 4.42028 5.38248 4.40766 5.2673C4.3924 5.12769 4.38487 5.00233 4.38487 4.88348C4.38487 2.98842 5.92665 1.44664 7.82171 1.44664C9.71678 1.44664 11.2586 2.98842 11.2586 4.88348C11.2586 5.00233 11.251 5.12769 11.2358 5.2673C11.2231 5.38228 11.26 5.49726 11.3373 5.58355C11.4144 5.66963 11.5247 5.71888 11.6403 5.71888H11.7217C13.0541 5.71888 14.138 6.80297 14.138 8.13554C14.138 9.46811 13.0541 10.5522 11.7217 10.5522H11.288C11.0634 10.5522 10.881 10.7345 10.881 10.9592C10.881 11.1839 11.0634 11.3662 11.288 11.3662H11.7217C13.5028 11.3662 14.952 9.91704 14.952 8.13554C14.952 6.47247 13.6892 5.099 12.0724 4.92378Z"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M6.26314 11.942C6.0877 12.1876 6.26327 12.5288 6.5651 12.5288H8.81272L7.3764 14.5396C7.25728 14.7064 7.29591 14.9382 7.46268 15.0573C7.62945 15.1764 7.86122 15.1378 7.98034 14.971L9.83579 12.3734C10.0112 12.1278 9.83566 11.7866 9.53382 11.7866H7.2862L8.72252 9.77578C8.84164 9.609 8.80302 9.37724 8.63624 9.25811C8.46947 9.13899 8.23771 9.17762 8.11858 9.34439L6.26314 11.942Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <svg class="absolute w-0 h-0">
+              <clippath id="my-clip-path" clipPathUnits="objectBoundingBox" stroke="white" stroke-width="2">
+                <path
+                  d="M0.001,0.031 C0.001,0.014,0.026,0.001,0.055,0.001 H0.492 C0.506,0.001,0.52,0.004,0.53,0.009 L0.61,0.052 C0.62,0.057,0.634,0.06,0.649,0.06 H0.947 C0.977,0.06,1,0.074,1,0.091 V0.971 C1,0.987,0.977,1,0.947,1 H0.055 C0.026,1,0.001,0.987,0.001,0.971 V0.031"
+                ></path>
+              </clippath>
+            </svg>
+          </div>
+        </div>
+        <!-- Sidebar Profile End -->
+
+        <!-- Nav/Navigation Start -->
+        <div
+          class="minfo__nav__wrapper bg-snowWhite dark:bg-power__black max-xl:hidden fixed top-1/2 -translate-y-1/2 right-4 2xl:right-14 z-999 flex items-center flex-col gap-4 border border-platinum dark:border-metalBlack rounded-4xl px-2.5 py-4"
+        >
+          <!-- Site Logo Start -->
+          <div class="flex border rounded-full logo w-15 h-15 border-platinum dark:border-metalBlack flex-center">
+            <a href="/">
+              <img src="./site-logo.svg" alt="site logo" />
+            </a>
+          </div>
+          <!-- Site Logo Start -->
+
+          <!-- Main Menu/Navigation Start -->
+          <div class="my-4 menu grow">
+            <ul class="space-y-2 text-center">
+              <li data-scroll-nav="0" class="relative group">
+                <a
+                  href="/#home"
+                  class="w-9 h-9 rounded-full flex-center group-[&amp;.active]:bg-white dark:group-[&amp;.active]:bg-metalBlack group-hover:bg-white dark:group-hover:bg-metalBlack transition-all duration-300 before:content-[attr(data-title)] before:absolute before:right-10 before:bg-white dark:before:bg-metalBlack before:text-sm text-theme dark:before:text-white before:px-4 before:py-2 before:rounded-md before:font-normal dark:before:font-light before:opacity-0 before:transition-all before:duration-200 group-hover:before:opacity-100 after:content-[&#39;&#39;] after:absolute after:w-0 after:h-0 after:right-8 after:border-solid after:border-t-4 after:border-r-0 after:border-b-4 after:border-l-8 after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-white dark:after:border-l-metalBlack after:opacity-0 after:transition-all after:duration-200 group-hover:after:opacity-100"
+                  data-title="Home"
+                >
+                  <span class="text-black dark:text-white group-hover:text-theme group-[&amp;.active]:text-theme">
+                    <i class="fal fa-home"></i>
+                  </span>
+                </a>
+              </li>
+              <li data-scroll-nav="1" class="relative group">
+                <a
+                  href="/#about"
+                  class="w-9 h-9 rounded-full flex-center group-[&amp;.active]:bg-white dark:group-[&amp;.active]:bg-metalBlack group-hover:bg-white dark:group-hover:bg-metalBlack transition-all duration-300 before:content-[attr(data-title)] before:absolute before:right-10 before:bg-white dark:before:bg-metalBlack before:text-sm text-theme dark:before:text-white before:px-4 before:py-2 before:rounded-md before:font-normal dark:before:font-light before:opacity-0 before:transition-all before:duration-200 group-hover:before:opacity-100 after:content-[&#39;&#39;] after:absolute after:w-0 after:h-0 after:right-8 after:border-solid after:border-t-4 after:border-r-0 after:border-b-4 after:border-l-8 after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-white dark:after:border-l-metalBlack after:opacity-0 after:transition-all after:duration-200 group-hover:after:opacity-100"
+                  data-title="About"
+                >
+                  <span class="text-black dark:text-white group-hover:text-theme group-[&amp;.active]:text-theme">
+                    <i class="fal fa-user"></i>
+                  </span>
+                </a>
+              </li>
+              <li data-scroll-nav="2" class="relative group">
+                <a
+                  href="/#resume"
+                  class="w-9 h-9 rounded-full flex-center group-[&amp;.active]:bg-white dark:group-[&amp;.active]:bg-metalBlack group-hover:bg-white dark:group-hover:bg-metalBlack transition-all duration-300 before:content-[attr(data-title)] before:absolute before:right-10 before:bg-white dark:before:bg-metalBlack before:text-sm text-theme dark:before:text-white before:px-4 before:py-2 before:rounded-md before:font-normal dark:before:font-light before:opacity-0 before:transition-all before:duration-200 group-hover:before:opacity-100 after:content-[&#39;&#39;] after:absolute after:w-0 after:h-0 after:right-8 after:border-solid after:border-t-4 after:border-r-0 after:border-b-4 after:border-l-8 after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-white dark:after:border-l-metalBlack after:opacity-0 after:transition-all after:duration-200 group-hover:after:opacity-100"
+                  data-title="Resume"
+                >
+                  <span class="text-black dark:text-white group-hover:text-theme group-[&amp;.active]:text-theme">
+                    <i class="fal fa-file-alt"></i>
+                  </span>
+                </a>
+              </li>
+              <li data-scroll-nav="3" class="relative group">
+                <a
+                  href="/#skill"
+                  class="w-9 h-9 rounded-full flex-center group-[&amp;.active]:bg-white dark:group-[&amp;.active]:bg-metalBlack group-hover:bg-white dark:group-hover:bg-metalBlack transition-all duration-300 before:content-[attr(data-title)] before:absolute before:right-10 before:bg-white dark:before:bg-metalBlack before:text-sm text-theme dark:before:text-white before:px-4 before:py-2 before:rounded-md before:font-normal dark:before:font-light before:opacity-0 before:transition-all before:duration-200 group-hover:before:opacity-100 after:content-[&#39;&#39;] after:absolute after:w-0 after:h-0 after:right-8 after:border-solid after:border-t-4 after:border-r-0 after:border-b-4 after:border-l-8 after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-white dark:after:border-l-metalBlack after:opacity-0 after:transition-all after:duration-200 group-hover:after:opacity-100"
+                  data-title="Skills"
+                >
+                  <span class="text-black dark:text-white group-hover:text-theme group-[&amp;.active]:text-theme">
+                    <i class="fal fa-graduation-cap"></i>
+                  </span>
+                </a>
+              </li>
+              <li data-scroll-nav="4" class="relative group">
+                <a
+                  href="/#contact"
+                  class="w-9 h-9 rounded-full flex-center group-[&amp;.active]:bg-white dark:group-[&amp;.active]:bg-metalBlack group-hover:bg-white dark:group-hover:bg-metalBlack transition-all duration-300 before:content-[attr(data-title)] before:absolute before:right-10 before:bg-white dark:before:bg-metalBlack before:text-sm text-theme dark:before:text-white before:px-4 before:py-2 before:rounded-md before:font-normal dark:before:font-light before:opacity-0 before:transition-all before:duration-200 group-hover:before:opacity-100 after:content-[&#39;&#39;] after:absolute after:w-0 after:h-0 after:right-8 after:border-solid after:border-t-4 after:border-r-0 after:border-b-4 after:border-l-8 after:border-t-transparent after:border-r-transparent after:border-b-transparent after:border-l-white dark:after:border-l-metalBlack after:opacity-0 after:transition-all after:duration-200 group-hover:after:opacity-100"
+                  data-title="Contact"
+                >
+                  <span class="text-black dark:text-white group-hover:text-theme group-[&amp;.active]:text-theme">
+                    <i class="fal fa-envelope"></i>
+                  </span>
+                </a>
+              </li>
+              <li href="/" class="w-9 h-9"></li>
+              <li href="/" class="w-9 h-9"></li>
+            </ul>
+          </div>
+          <!-- Main Menu/Navigation End -->
+
+          <!-- Share Button Wrapper Start -->
+          <a
+            href="/#top"
+            id="scroll-top"
+            class="w-10 h-10 text-sm border rounded-full border-platinum dark:border-metalBlack flex-center group-hover:bg-white dark:group-hover:bg-metalBlack text-black dark:text-white invisible"
+          >
+            <i class="fal fa-arrow-up"></i>
+          </a>
+          <div class="relative share group">
+            <button
+              class="w-10 h-10 text-sm border rounded-full border-platinum dark:border-metalBlack flex-center group-hover:bg-white dark:group-hover:bg-metalBlack text-black dark:text-white"
+              aria-label="Share"
+            >
+              <i class="fal fa-share-alt"></i>
+            </button>
+
+            <!-- Social Share Icon Start  -->
+            <div
+              class="absolute bottom-0 flex items-center invisible px-5 py-6 space-x-3 transition-all duration-300 -translate-y-1/2 opacity-0 social-icons top-1/2 bg-white dark:bg-nightBlack rounded-4xl right-6 group-hover:opacity-100 group-hover:visible group-hover:right-10 -z-1"
+            >
+              <a
+                href="https://api.whatsapp.com/send?text=Check%20this%20portfolio%20of%20Rushikesh%20Chavan%0Ahttps%3A%2F%2Frushi.ch"
+                target="_blank"
+                class="flex transition duration-200 hover:text-white"
+                title="Share with WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rushi.ch" class="flex transition duration-200 hover:text-white" title="Share with Linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://twitter.com/intent/tweet?text=Check%20this%20portfolio%20of%20Rushikesh%20Chavan&url=https%3A%2F%2Frushi.ch"
+                target="_blank"
+                class="flex transition duration-200 hover:text-white"
+                title="Share with X"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="sms:?body=Check this portfolio of Rushikesh Chavan https://rushi.ch" class="flex transition duration-200 hover:text-white" title="Share with SMS">
+                <i class="fas fa-comment"></i>
+              </a>
+            </div>
+            <!-- Social Share Icon End  -->
+          </div>
+          <!-- Share Button Wrapper End -->
+        </div>
+        <!-- Nav/Navigation End -->
+
+        <!-- Main Content Start -->
+        <div class="relative mx-auto minfo__contentBox max-w-container xl:max-2xl:max-w-65rem">
+          <!-- Hero/Introduction Section Start -->
+          <div data-scroll-index="0" id="home" class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div class="px-5 py-8 bg-white dark:bg-nightBlack rounded-2xl hero-section md:p-8 lg:p-10 2xl:p-13">
+              <div class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                <i class="fal fa-home text-theme"></i>
+                INTRODUCE
+              </div>
+              <div class="items-center gap-6 hero-content md:flex xl:gap-10">
+                <div class="text-content pt-7 lg:pt-8 max-lg:max-w-[30rem]">
+                  <h1 class="text-[32px] lg:text-5xl xl:text-4xl 2xl:text-5xl font-semibold text-black dark:text-white leading-1.27 lg:leading-1.27 xl:leading-1.27 2xl:leading-1.27 mb-4 lg:mb-5">
+                    I Engineer<br />
+                    <span class="text-theme">Impactful Digital Solutions</span>
+                  </h1>
+                  <p>
+                    I am a <span class="font-medium text-black dark:text-white/90">Digital Specialist Engineer</span> with a passion for creating innovative solutions tailored to meet specific needs.
+                  </p>
+                  <ul class="flex items-center mt-4 -mx-3 lg:mt-5">
+                    <li class="flex items-center mx-3 text-regular">
+                      <i class="mr-2 fas fa-check-double text-theme"></i>
+                      Available for work
+                    </li>
+                    <li class="flex items-center mx-3 text-regular">
+                      <i class="mr-2 fas fa-check-double text-theme"></i>
+                      Full Time Job
+                    </li>
+                  </ul>
+                  <ul class="mt-7 buttons">
+                    <li data-scroll-nav="4">
+                      <a
+                        href="/#contact"
+                        class="btn-theme inline-flex items-center gap-2 bg-theme text-power__black py-4 md:py-4.5 lg:px-9 px-7 rounded-4xl leading-none transition-all duration-300 hover:shadow-theme_shadow text-white font-medium text-[15px] md:text-base"
+                      >
+                        <i class="fal fa-paper-plane"></i>
+                        HIRE ME
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hero-image flex-[0_0_20.3rem] max-md:hidden">
+                  <img src="./images/hero-img-1.png" class="dark:hidden" alt="Hero Image - Light Mode" />
+                  <img src="./images/hero-img-2.png" class="hidden dark:block" alt="Hero Image - Dark Mode" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero/Introduction Section End -->
+
+          <!-- About Me Section Start -->
+          <div data-scroll-index="1" id="about" class="py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div class="px-5 py-8 md:p-8 bg-white dark:bg-nightBlack rounded-2xl about-section lg:p-10 2xl:p-13">
+              <div class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                <i class="fal fa-user text-theme"></i>
+                ABOUT ME
+              </div>
+              <div class="mt-7 md:mt-10 section-title">
+                <h2 class="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">About <span class="font-semibold text-theme">Me</span></h2>
+                <p class="max-w-2xl mt-4 md:mt-6 subtitle">
+                  Hello, I am <span class="text-black dark:text-white">Rushikesh Chavan</span> and I bring a wealth of experience in software development, automation testing, and project management.
+                  With various roles at Infosys Limited and APlize Social, I've dedicated my career to crafting digital solutions that surpass expectations. From developing automation test frameworks
+                  to driving growth through digital marketing analytics, I've honed my skills to deliver impactful results.
+                </p>
+              </div>
+              <div class="mt-6 section-content">
+                <div class="inline-flex flex-wrap items-center gap-2 mb-5 text-sm md:gap-4">
+                  <a
+                    href="/#"
+                    class="inline-block px-3.5 py-2 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl md:px-5 md: md:py-2 hover:text-theme dark:hover:text-white"
+                  >
+                    Selenium (90%)
+                  </a>
+                  <a
+                    href="/#"
+                    class="inline-block px-3.5 py-2 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl md:px-5 md: md:py-2 hover:text-theme dark:hover:text-white"
+                  >
+                    Data Analytics (90%)
+                  </a>
+                  <a
+                    href="/#"
+                    class="inline-block px-3.5 py-2 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl md:px-5 md: md:py-2 hover:text-theme dark:hover:text-white"
+                  >
+                    Web Development (85%)
+                  </a>
+                  <a
+                    href="/#"
+                    class="inline-block px-3.5 py-2 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl md:px-5 md: md:py-2 hover:text-theme dark:hover:text-white"
+                  >
+                    REST API (80%)
+                  </a>
+                </div>
+
+                <!-- <ul class="grid mt-4 mb-10 text-sm lg:mt-6 md:grid-cols-2 gap-x-8 gap-y-3">
+                  <li class="flex items-center">
+                    <span class="flex-[0_0_6rem]">Phone</span>
+                    <span class="flex-[0_0_2rem]">:</span>
+                    <span class="text-black dark:text-white">
+                      <a href="tel:+18185351603">+1 (818) 535 1603</a>
+                    </span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="flex-[0_0_6rem]">Email</span>
+                    <span class="flex-[0_0_2rem]">:</span>
+                    <span class="text-black dark:text-white">
+                      <a href="mailto:rushi.ch01@google.com"> rushi.ch01@google.com </a>
+                    </span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="flex-[0_0_6rem]">LinkedIn</span>
+                    <span class="flex-[0_0_2rem]">:</span>
+                    <span class="text-black dark:text-white">
+                      <a href="https://www.linkedin.com/in/rushi-chavan" target="_blank"> linkedin.com/in/rushi-chavan</a>
+                    </span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="flex-[0_0_6rem]">GitHub</span>
+                    <span class="flex-[0_0_2rem]">:</span>
+                    <span class="text-black dark:text-white">
+                      <a href="https://www.github.com/rushi-chavan" target="_blank"> github.com/rushi-chavan </a>
+                    </span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="flex-[0_0_6rem]">Language</span>
+                    <span class="flex-[0_0_2rem]">:</span>
+                    <span class="text-black dark:text-white">English, Hindi, Marathi</span>
+                  </li>
+                </ul> -->
+
+                <ul class="grid grid-cols-2 gap-6 counters md:grid-cols-4 xl:gap-8">
+                  <li class="">
+                    <div class="mb-1 text-2xl font-semibold md:text-3xl number text-theme 2xl:text-4xl"><span>3</span>+</div>
+                    <div class="text-sm">Years Of Experience</div>
+                  </li>
+                  <li class="">
+                    <div class="mb-1 text-2xl font-semibold md:text-3xl number text-theme 2xl:text-4xl"><span>5 </span>+</div>
+                    <div class="text-sm">Handled Projects</div>
+                  </li>
+                  <li class="">
+                    <div class="mb-1 text-2xl font-semibold md:text-3xl number text-theme 2xl:text-4xl"><span>1</span></div>
+                    <div class="text-sm">Open Source Contribution</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- About Me Section End -->
+
+          <!-- My Resume Section Start -->
+          <div data-scroll-index="2" id="resume" class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div class="px-5 py-8 md:p-8 bg-white dark:bg-nightBlack rounded-2xl service-section lg:p-10 2xl:p-13">
+              <div class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                <i class="fal fa-folder-open text-theme"></i>
+                RESUME
+              </div>
+              <div class="mb-8 mt-7 md:my-10 section-title">
+                <h2 class="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">Work <span class="font-semibold text-theme">Experience</span></h2>
+                <p class="max-w-xl mt-4 md:mt-6 subtitle">
+                  I engineer practical solutions. My focus is on creating products that seamlessly integrate form and function, ready for seamless deployment and use.
+                </p>
+              </div>
+              <!--./section-title-->
+
+              <div class="experience">
+                <ul
+                  class="space-y-5 md:space-y-11 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:left-64 md:before:border-r md:before:border-platinum md:dark:before:border-metalBlack md:before:h-[calc(100%_-1.5rem)] md:before:top-1/2 md:before:-translate-y-1/2"
+                >
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">Infosys</h6>
+                      <p class="text-[13px] md:text-sm text-theme">Aug 2021 - Jul 2022</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">Digital Specialist Engineer</h4>
+                      <p>Contributed to leading a team in implementing optimized testing frameworks and automating banking projects, resulting in significant efficiency gains.</p>
+                    </div>
+                  </li>
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">Infosys</h6>
+                      <p class="text-[13px] md:text-sm text-theme">Nov 2020 - Jul 2021</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">System Engineer Specialist</h4>
+                      <p>Developed and enhanced automation test frameworks, reducing manual testing time and ensuring software quality.</p>
+                    </div>
+                  </li>
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">APlize Social</h6>
+                      <p class="text-[13px] md:text-sm text-theme">Aug 2019 - Oct 2020</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">Digital Marketing Analyst</h4>
+                      <p>Crafted data-driven marketing strategies and optimized user engagement, driving substantial client growth.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <br />
+              <div class="mb-8 mt-7 md:my-10 section-title">
+                <h2 class="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">My <span class="font-semibold text-theme">Education</span></h2>
+              </div>
+
+              <div class="experience">
+                <ul
+                  class="space-y-5 md:space-y-11 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:left-64 md:before:border-r md:before:border-platinum md:dark:before:border-metalBlack md:before:h-[calc(100%_-1.5rem)] md:before:top-1/2 md:before:-translate-y-1/2"
+                >
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">California State University, Northridge</h6>
+                      <p class="text-[13px] md:text-sm text-theme">2022 - 2024</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">MSc in Engineering Management</h4>
+                      <!-- <p>Owing to advancements in product other designer technologies aute voluptate.</p> -->
+                    </div>
+                  </li>
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">Savitribai Phule Pune University</h6>
+                      <p class="text-[13px] md:text-sm text-theme">2017 - 2020</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">BSc in Information Technology</h4>
+                      <!-- <p>Owing to advancements in product other designer technologies aute voluptate.</p> -->
+                    </div>
+                  </li>
+                  <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+                    <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+                      <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">Maharashtra State Board of Technical Education</h6>
+                      <p class="text-[13px] md:text-sm text-theme">2014 - 2017</p>
+                    </div>
+                    <div
+                      class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow"
+                    >
+                      <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">Diploma in Information Technology</h4>
+                      <!-- <p>Owing to advancements in product other designer technologies aute voluptate.</p> -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- My Resume Section End -->
+
+          <!-- Skills Section Start -->
+          <div data-scroll-index="3" id="skill" class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div class="relative px-5 py-8 md:p-8 bg-white dark:bg-nightBlack rounded-2xl service-section lg:p-10 2xl:p-13">
+              <div class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                <i class="fal fa-graduation-cap text-theme"></i>
+                SKILLS
+              </div>
+              <div class="mb-4 mt-10 section-title">
+                <h2 class="title text-[32px] font-extralight text-black dark:text-white leading-1.27">Programming Languages and Technologies</h2>
+              </div>
+              <div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Python
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Java
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  JavaScript
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  C++
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  HTML & CSS
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Kotlin
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  SQL
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  JSON
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  TypeScript
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  PHP
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  jQuery
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  C
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Swift
+                </div>
+              </div>
+              <div class="mb-4 mt-10 section-title">
+                <h2 class="title text-[32px] font-extralight text-black dark:text-white leading-1.27">Development Frameworks and Libraries</h2>
+              </div>
+              <div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Angular
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  React
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Django
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Spring
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Selenium
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  ASP.NET
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Bootstrap
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Tailwind
+                </div>
+              </div>
+              <div class="mb-4 mt-10 section-title">
+                <h2 class="title text-[32px] font-extralight text-black dark:text-white leading-1.27">Database Management and scripting</h2>
+              </div>
+              <div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  MySQL
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  PostgreSQL
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Firebase
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  MongoDB
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Bash
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Shell scripting
+                </div>
+              </div>
+              <div class="mb-4 mt-10 section-title">
+                <h2 class="title text-[32px] font-extralight text-black dark:text-white leading-1.27">Version Control and DevOps:</h2>
+              </div>
+              <div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Git
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  GitHub
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Bitbucket
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Selenium
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  TestNG
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Jenkins
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Maven
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  ALM
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Docker
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Kubernetes
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  Jira
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  GitLab
+                </div>
+                <div
+                  class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white"
+                >
+                  SVN
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Skills Section End -->
+
+          <!-- Contact Section Start -->
+          <div data-scroll-index="4" id="contact" class="py-5 xl:py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto">
+            <div class="px-5 py-8 bg-white dark:bg-nightBlack rounded-2xl contact-section lg:p-13">
+              <div class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl">
+                <i class="fal fa-envelope-open text-theme"></i>
+                CONTACT
+              </div>
+              <div class="mb-10 mt-7 section-title">
+                <h2 class="title text-[32px] md:text-4xl lg:text-5xl font-extralight text-black dark:text-white leading-1.27">Connect with <span class="font-semibold text-theme">me.</span></h2>
+              </div>
+              <!--./section-title-->
+
+              <div class="grid gap-12 mt-8 mb-10 md:my-12 md:grid-cols-12">
+                <div class="md:col-span-5">
+                  <ul class="space-y-6 md:space-y-10 2xl:space-y-12 contact-info">
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <svg width="29" height="42" viewBox="0 0 29 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M21.9647 14.6023C21.9647 13.1428 21.5323 11.7161 20.7221 10.5026C19.9119 9.28904 18.7603 8.34321 17.4129 7.78469C16.0656 7.22617 14.5831 7.08003 13.1527 7.36476C11.7224 7.6495 10.4086 8.35231 9.3774 9.38432C8.3462 10.4163 7.64394 11.7312 7.35943 13.1627C7.07492 14.5941 7.22095 16.0778 7.77903 17.4262C8.33711 18.7746 9.28219 19.9271 10.4947 20.738C11.7073 21.5488 13.1329 21.9816 14.5912 21.9816C16.5461 21.9793 18.4203 21.2011 19.8026 19.8177C21.1849 18.4343 21.9624 16.5587 21.9647 14.6023ZM8.19081 14.6023C8.19081 13.3354 8.56618 12.097 9.26947 11.0436C9.97276 9.99021 10.9724 9.1692 12.1419 8.68439C13.3114 8.19957 14.5983 8.07272 15.8399 8.31988C17.0815 8.56703 18.2219 9.1771 19.117 10.0729C20.0121 10.9687 20.6217 12.1101 20.8687 13.3526C21.1156 14.5952 20.9889 15.8831 20.5045 17.0536C20.02 18.224 19.1997 19.2244 18.1471 19.9283C17.0946 20.6321 15.8571 21.0078 14.5912 21.0078C12.8943 21.0059 11.2674 20.3304 10.0675 19.1296C8.86764 17.9287 8.1927 16.3005 8.19081 14.6023ZM24.2873 33.543C22.5204 32.783 20.65 32.2913 18.738 32.0842C20.9575 29.4709 23.0322 26.7378 24.9528 23.8972C27.4103 20.1273 28.6053 17.0871 28.6053 14.6013C28.6053 10.8818 27.1289 7.31453 24.5008 4.68439C21.8728 2.05426 18.3084 0.57666 14.5917 0.57666C10.8751 0.57666 7.31067 2.05426 4.68261 4.68439C2.05455 7.31453 0.578125 10.8818 0.578125 14.6013C0.578125 17.0871 1.77411 20.1273 4.23066 23.8967C6.15138 26.7371 8.22592 29.4701 10.445 32.0837C8.54054 32.2902 6.67728 32.7786 4.9162 33.5329C2.63665 34.5891 2.15778 35.7693 2.15778 36.5736C2.15778 37.9338 3.51546 39.1671 5.98063 40.0466C8.76145 40.9426 11.6708 41.374 14.5917 41.3235C17.5127 41.3739 20.422 40.9425 23.2028 40.0466C25.6675 39.1671 27.0252 37.9338 27.0252 36.5736C27.0252 35.7741 26.5511 34.5963 24.2873 33.543ZM1.5507 14.6023C1.5507 11.141 2.92461 7.82145 5.37018 5.37394C7.81576 2.92644 11.1327 1.55144 14.5912 1.55144C18.0498 1.55144 21.3667 2.92644 23.8123 5.37394C26.2579 7.82145 27.6318 11.141 27.6318 14.6023C27.6318 19.8104 21.5983 27.1016 17.1932 32.4255C16.2503 33.5655 15.3514 34.6518 14.5912 35.6209C13.8311 34.6518 12.9322 33.5655 11.9893 32.4255C7.5842 27.1016 1.5507 19.8104 1.5507 14.6023ZM14.5912 40.3506C7.83727 40.3506 3.13083 38.3609 3.13083 36.5751C3.13083 35.8397 3.91014 35.0736 5.32475 34.4206C7.19133 33.6402 9.16768 33.1547 11.1832 32.9814L11.2396 33.0494C12.3399 34.3813 13.3833 35.64 14.2057 36.7134C14.2511 36.7728 14.3095 36.8209 14.3765 36.854C14.4435 36.8871 14.5172 36.9043 14.592 36.9043C14.6667 36.9043 14.7404 36.8871 14.8074 36.854C14.8744 36.8209 14.9328 36.7728 14.9783 36.7134C15.7997 35.64 16.8411 34.3818 17.9443 33.0494L18.0007 32.9814C20.0231 33.1548 22.0061 33.6433 23.8778 34.4292C25.2805 35.0827 26.0531 35.8454 26.0531 36.5774C26.0516 38.3609 21.3452 40.3506 14.5912 40.3506Z"
+                            fill="#00BC91"
+                          ></path>
+                          <circle cx="14.5889" cy="14.6548" r="3.69277" stroke="white" stroke-width="0.7"></circle>
+                        </svg>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">Location</h6>
+                        <p class="text-sm">
+                          <a href="https://maps.app.goo.gl/SsTfo2ybkVoRgcss8" target="_blank">Northridge, Los Angeles CA, USA </a>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <svg width="41" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M31.6257 9.60099V6.29746H27.5763L20.6254 0.64209L13.6843 6.29746H9.62601V9.57337L0.300781 17.1443V40.133C0.300781 40.7549 0.806087 41.261 1.42707 41.261H39.7609C40.3819 41.261 40.8872 40.7549 40.8872 40.133V17.1447L31.6257 9.60099ZM40.2455 40.2187L26.9416 28.7431L40.2536 17.9864V40.1326C40.2536 40.1622 40.2504 40.1907 40.2455 40.2187ZM40.0832 17.308L31.6257 24.1422V10.4195L40.0832 17.308ZM20.6258 1.46056L26.5706 6.29746H14.6888L20.6258 1.46056ZM30.9913 6.93233V24.6548L26.4529 28.3214L20.6262 23.2957L14.7643 28.3186L10.26 24.6791V6.93233H30.9913ZM0.936777 40.1663C0.935965 40.1553 0.935153 40.1444 0.935153 40.133V17.96L14.274 28.7386L0.936777 40.1663ZM9.62601 24.1665L1.12185 17.295L9.62601 10.3906V24.1665ZM1.37877 40.6237L20.625 24.1328L39.7463 40.6257H1.42707C1.41083 40.6261 1.3946 40.6253 1.37877 40.6237ZM26.1534 13.8802H15.0979V13.2453H26.1534V13.8802ZM26.1534 20.2789H15.0979V19.6436H26.1534V20.2789Z"
+                            fill="#00BC91"
+                          ></path>
+                          <path d="M30.9531 7.00537L31.0128 24.7123L31.6389 24.2046L31.6389 7.00537L30.9531 7.00537Z" fill="white"></path>
+                          <rect x="15.1133" y="13.2266" width="11.0781" height="0.685791" fill="white"></rect>
+                          <rect x="9.625" y="6.3042" width="22.0156" height="0.700928" fill="white"></rect>
+                          <path d="M10.3125 7.00488L10.2528 24.7118L9.62671 24.2041L9.62671 7.00488L10.3125 7.00488Z" fill="white"></path>
+                          <path d="M15.0547 19.6567H26.1328V20.27H15.0547V19.6567Z" fill="white"></path>
+                        </svg>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">E-mail</h6>
+                        <p class="text-sm">
+                          <a href="mailto:rushi.ch01@gmail.com" target="_blank">rushi.ch01@gmail.com</a>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <svg width="41" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M28.7321 41.2896C28.9475 41.3359 29.1625 41.3587 29.3795 41.3587C31.885 41.3583 34.5278 38.3392 37.6673 34.4367C38.2236 33.7461 38.1415 32.7236 37.4767 32.0582L31.1742 25.7508C30.4817 25.0581 29.4031 25.0065 28.7163 25.6328C25.6475 28.4315 24.916 28.2488 23.6753 27.6103C19.528 25.4754 16.0691 22.0138 13.9367 17.864C13.2987 16.6231 13.1162 15.8902 15.9126 12.819C16.5381 12.1317 16.4865 11.0514 15.7948 10.3592L9.4919 4.05133C8.82743 3.38593 7.80574 3.30459 7.11608 3.86017C2.87895 7.27501 -0.315768 10.1013 0.26823 12.8032C2.72899 24.1841 17.3602 38.8269 28.7321 41.2896ZM29.2771 26.2486C29.6286 25.9289 30.2155 25.9692 30.5857 26.3397L36.8882 32.6471C37.2454 33.0051 37.3031 33.5614 37.019 33.9141C36.4137 34.6666 35.8221 35.3909 35.2449 36.0686L27.1619 27.9789C27.7588 27.5708 28.4449 27.0077 29.2771 26.2486ZM7.6379 4.5093C7.78827 4.38809 7.97562 4.32912 8.16907 4.32912C8.42876 4.32912 8.69861 4.43527 8.90343 4.64026L15.2063 10.9481C15.5765 11.3186 15.6176 11.9063 15.2973 12.2578C14.5389 13.0908 13.9762 13.7775 13.5686 14.3748L5.4852 6.28504C6.16231 5.7073 6.88601 5.11521 7.6379 4.5093ZM4.85451 6.83173L13.1231 15.1069C12.4931 16.3176 12.6377 17.1583 13.1962 18.2447C15.4075 22.5482 18.994 26.1371 23.2949 28.3513C24.38 28.9106 25.2204 29.0554 26.4304 28.4247L34.6986 36.6998C32.5226 39.1709 30.5677 40.8352 28.9085 40.4753C17.791 38.0675 3.48774 23.7529 1.08184 12.6267C0.722586 10.9658 2.38527 9.00967 4.85451 6.83173Z"
+                            fill="#00BC91"
+                          ></path>
+                          <path
+                            d="M23.3107 1.37642C32.5978 1.37642 40.1532 8.93738 40.1532 18.231C40.1532 18.4612 40.3393 18.6475 40.5693 18.6475C40.7993 18.6475 40.9855 18.4612 40.9855 18.231C40.9855 8.4782 33.0566 0.543457 23.3107 0.543457C23.0807 0.543457 22.8945 0.729736 22.8945 0.95994C22.8945 1.19014 23.0807 1.37642 23.3107 1.37642Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M23.3107 8.02633C28.9336 8.02633 33.5081 12.604 33.5081 18.231C33.5081 18.4612 33.6942 18.6475 33.9242 18.6475C34.1543 18.6475 34.3404 18.4612 34.3404 18.231C34.3404 12.1448 29.3925 7.19336 23.3107 7.19336C23.0807 7.19336 22.8945 7.37964 22.8945 7.60984C22.8945 7.84005 23.0807 8.02633 23.3107 8.02633Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M22.8945 14.2597C22.8945 14.4899 23.0807 14.6762 23.3107 14.6762C25.2691 14.6762 26.8626 16.271 26.8626 18.2314C26.8626 18.4616 27.0488 18.6479 27.2788 18.6479C27.5088 18.6479 27.6949 18.4616 27.6949 18.2314C27.6949 15.8118 25.7284 13.8433 23.3107 13.8433C23.0807 13.8433 22.8945 14.0295 22.8945 14.2597Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">Phone</h6>
+                        <p class="text-sm">
+                          <a href="tel:+18185351603">+1 (818) 535 1603</a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="md:col-span-5">
+                  <ul class="space-y-6 md:space-y-10 2xl:space-y-12 contact-info">
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <i class="fab fa-instagram text-[32px]" style="color: #00bc91"></i>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">Instagram</h6>
+                        <p class="text-sm">
+                          <a href="https://www.instagram.com/rushi__chavan/" target="_blank">/rushi__chavan</a>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <i class="fab fa-linkedin-in text-[32px]" style="color: #00bc91"></i>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">Instagram</h6>
+                        <p class="text-sm">
+                          <a href="https://www.linkedin.com/in/rushi-chavan/" target="_blank">/in/rushi-chavan</a>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex flex-wrap items-center gap-5">
+                      <div class="flex justify-center w-12 icon">
+                        <i class="fab fa-github text-[32px]" style="color: #00bc91"></i>
+                      </div>
+                      <div class="flex-1">
+                        <h6 class="text-lg text-black dark:text-white">GitHub</h6>
+                        <p class="text-sm">
+                          <a href="https://github.com/rushi-chavan/" target="_blank">/rushi-chavan</a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Contact info end -->
+              </div>
+            </div>
+          </div>
+          <!-- Contact Section End -->
+        </div>
+        <!-- Main Content End -->
       </div>
-    </section>
-    <script src="/script/main.js"></script>
+    </div>
+    <!-- App End -->
+
+    <!-- Background Line and Animation -->
+    <div class="bg-lines fixed inset-0 -z-1 md:max-xl:max-w-[45rem] xl:max-w-60rem 2xl:max-w-container mx-auto max-sm:px-8 sm:max-xl:px-12">
+      <div class="line-wrapper max-w-[1130px] w-full h-full ml-auto 2xl:-mr-24 relative flex justify-between">
+        <div
+          class="relative w-px h-full border-r border-dashed line line1 border-slate-300 dark:border-metalBlack before:absolute before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-top_bottom"
+        ></div>
+
+        <div
+          class="relative w-px h-full border-r border-dashed line line2 border-slate-300 dark:border-metalBlack before:absolute before:bottom-0 before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-bottom_top before:animate-delay-3s"
+        ></div>
+
+        <div
+          class="relative w-px h-full border-r border-dashed line line3 border-slate-300 dark:border-metalBlack before:absolute before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-top_bottom before:animate-delay-3s"
+        ></div>
+
+        <div
+          class="relative w-px h-full border-r border-dashed line line4 border-slate-300 dark:border-metalBlack before:absolute before:bottom-0 before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-bottom_top before:animate-delay-2s"
+        ></div>
+      </div>
+    </div>
+    <!-- Ends Here -->
+
+    <!-- Style Switcher Started -->
+    <div class="style-switcher fixed right-0 top-1/2 -translate-y-1/2 translate-x-[15rem] w-[15rem] [&amp;.active]:translate-x-0 transition z-[9999]">
+      <div
+        class="toggle-btn absolute -left-15 w-15 h-15 bg-white dark:bg-nightBlack text-black dark:text-white flex-center cursor-pointer rounded-[.5rem_0_0_.5rem] select-none shadow-sm shadow-slate-400"
+      >
+        <span class="fal fa-cog fa-spin"></span>
+      </div>
+
+      <div class="theme-select shadow-sm shadow-slate-400 px-6 py-4 bg-white dark:bg-nightBlack rounded-[0_0_0_.5rem]">
+        <h5 class="font-medium mb-2 !text-black dark:!text-white text-lg">Theme Mode</h5>
+
+        <div class="flex items-center justify-between gap-4">
+          <div class="switcher-input rounded-lg text-xl flex-[1] text-center transition cursor-pointer" data-theme="dark">
+            <button
+              class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&amp;.active]:bg-flashWhite [&amp;.active]:text-black dark:text-white rounded-md"
+              id="dark_theme"
+              title="Active Dark Theme"
+            >
+              <i class="fal fa-moon"></i>
+            </button>
+          </div>
+          <div class="switcher-input rounded-lg text-lg flex-[1] text-center transition cursor-pointer" data-theme="light">
+            <button
+              class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&amp;.active]:bg-flashWhite [&amp;.active]:text-black dark:text-white rounded-md active"
+              id="light_theme"
+              title="Active Light Theme"
+            >
+              <i class="fal fa-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Style Switcher End -->
+
+    <!-- Js Library Start -->
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/waypoints.min.js"></script>
+    <script src="./scripts/tw-elements.umd.min.js"></script>
+    <script src="./scripts/cd-headline.js"></script>
+    <script src="./scripts/jquery.counterup.min.js"></script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="./scripts/scrollIt.min.js"></script>
+    <script src="./scripts/circle-progress.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/theme-mode.js"></script>
+    <!-- Js Library End -->
   </body>
 </html>
