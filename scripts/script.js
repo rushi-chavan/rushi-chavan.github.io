@@ -15,7 +15,7 @@
         setTimeout(function () {
           s && s.parentNode && s.parentNode.removeChild(s);
         }, 2000));
-  }, 4000);
+  }, 1000);
   /* Preloader End */
 
   /* ============================================================ */
@@ -327,6 +327,64 @@
       1000
     );
     return false;
+  });
+
+  // =================================================================
+  // Dynamic Data
+  // =================================================================
+
+  $(window).on("load", function () {
+    $.getJSON("../data.json", function (data) {
+      // Job Data
+      $("#experienceDescription").html(data.workExperience.description);
+      for (var i = Object.keys(data.workExperience.jobs).length - 1; i >= 0; i--) {
+        $("#experiences").append(`
+          <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+            <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+              <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">${data.workExperience.jobs[i].company}</h6>
+              <p class="text-[13px] md:text-sm text-theme">${data.workExperience.jobs[i].startDate} - ${data.workExperience.jobs[i].endDate}</p>
+            </div>
+            <div class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow">
+              <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">${data.workExperience.jobs[i].title}</h4>
+              <p>${data.workExperience.jobs[i].description}</p>
+            </div>
+          </li>
+        `);
+      }
+
+      // School Data
+      for (var i = Object.keys(data.education.schools).length - 1; i >= 0; i--) {
+        $("#schools").append(`
+          <li class="p-5 border rounded-xl md:flex max-md:space-y-2 border-platinum dark:border-metalBlack md:border-0 md:p-0 md:rounded-none">
+            <div class="flex items-center justify-between mb-5 md:w-64 md:block md:mb-0">
+              <h6 class="text-sm font-medium text-black dark:text-white text-opacity-60 md:text-base md:text-opacity-100">${data.education.schools[i].name}</h6>
+              <p class="text-[13px] md:text-sm text-theme">${data.education.schools[i].startDate} - ${data.education.schools[i].endDate}</p>
+            </div>
+            <div class="md:flex-1 md:pl-16 relative md:before:content-[&#39;&#39;] md:before:absolute md:before:-left-1 md:before:top-3 md:before:w-2 md:before:h-2 md:before:bg-theme md:before:rounded-full md:before:shadow-dots_glow">
+              <h4 class="text-xl xl:text-2xl font-medium xl:font-medium leading-7 text-black dark:text-white mb-2.5">${data.education.schools[i].course}</h4>
+              <!-- <p>Owing to advancements in product other designer technologies aute voluptate.</p> -->
+            </div>
+          </li>
+        `);
+      }
+
+      // Skills
+      for (var i = 0; i < Object.keys(data.skills).length; i++) {
+        $("#skillsList").append(`
+          <div class="mb-4 mt-10 section-title">
+            <h2 class="title text-[32px] font-extralight text-black dark:text-white leading-1.27">${data.skills[i].title}</h2>
+          </div>
+        `);
+        let skills = data.skills[i].list.split(",");
+        skills.forEach((skill) => {
+          $("#skillsList").append(`
+            <div class="inline-block text-sm px-3.5 py-2 mb-4 transition duration-300 border border-dashed text-black dark:text-white/70 border-platinum dark:border-greyBlack rounded-3xl hover:text-theme dark:hover:text-white">
+              ${skill}
+            </div>
+          `);
+        });
+      }
+    });
   });
 })(jQuery);
 // jQuery Ended

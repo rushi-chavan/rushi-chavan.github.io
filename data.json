@@ -1,0 +1,70 @@
+{
+  "workExperience": {
+    "description": "I engineer practical solutions. My focus is on creating products that seamlessly integrate form and function, ready for seamless deployment and use.",
+    "jobs": {
+      "0": {
+        "title": "Digital Marketing Analyst",
+        "company": "APlize Social",
+        "startDate": "Aug 2019",
+        "endDate": "Oct 2020",
+        "description": "Crafted data-driven marketing strategies and optimized user engagement, driving substantial client growth."
+      },
+      "1": {
+        "title": "System Engineer Specialist",
+        "company": "Infosys",
+        "startDate": "Nov 2020",
+        "endDate": "Jul 2021",
+        "description": "Developed and enhanced automation test frameworks, reducing manual testing time and ensuring software quality."
+      },
+      "2": {
+        "title": "Digital Specialist Engineer",
+        "company": "Infosys",
+        "startDate": "Aug 2021",
+        "endDate": "Jul 2022",
+        "description": "Contributed to leading a team in implementing optimized testing frameworks and automating banking projects, resulting in significant efficiency gains."
+      }
+    }
+  },
+
+  "education": {
+    "schools": {
+      "0": {
+        "course": "Diploma in Information Technology",
+        "name": "Maharashtra State Board of Technical Education",
+        "startDate": "2022",
+        "endDate": "2024"
+      },
+      "1": {
+        "course": "BSc in Information Technology",
+        "name": "Savitribai Phule Pune University",
+        "startDate": "2022",
+        "endDate": "2024"
+      },
+      "2": {
+        "course": "MSc in Engineering Management",
+        "name": "California State University, Northridge",
+        "startDate": "2022",
+        "endDate": "2024"
+      }
+    }
+  },
+
+  "skills": {
+    "0": {
+      "title": "Programming Languages and Technologies",
+      "list": "Python,Java,JavaScript,C++,HTML & CSS,Kotlin,SQL,JSON,TypeScript,PHP,jQuery,C,Swift"
+    },
+    "1": {
+      "title": "Development Frameworks and Libraries",
+      "list": "Angular,React,Django,Spring,Selenium,ASP.NET,Bootstrap,Tailwind"
+    },
+    "2": {
+      "title": "Database Management and scripting",
+      "list": "MySQL,PostgreSQL,Firebase,MongoDB,Bash,Shell scripting"
+    },
+    "3": {
+      "title": "Version Control and DevOps",
+      "list": "Git,GitHub,Bitbucket,Selenium,TestNG,Jenkins,Maven,ALM,Docker,Kubernetes,Jira,GitLab,SVN"
+    }
+  }
+}
